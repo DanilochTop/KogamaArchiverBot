@@ -73,7 +73,7 @@ class Discord {
 
 		let attachment = new DiscordJS.AttachmentBuilder(planetData, { name: `${gameData.id}.kgm` });
 
-		await channel.send({ content: `🆕 | \`${gameData.name}\` (ID: \`${gameData.id}\`) created by \`${gameData.owner}**\``, files: [attachment] });
+		await channel.send({ content: `🆕 | \`${gameData.name}\` (ID: \`${gameData.id}\`) created by \`${gameData.owner}\``, files: [attachment] });
 	}
 }
 
