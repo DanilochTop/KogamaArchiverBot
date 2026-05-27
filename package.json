@@ -1,0 +1,18 @@
+{
+  "name": "kogamaarchiverbot",
+  "version": "1.0.0",
+  "description": "KoGaMa Bot to archive all public games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "Daniloch",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2",
+    "ws": "^8.21.0"
+  }
+}
