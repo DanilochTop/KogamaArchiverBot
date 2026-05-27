@@ -2,8 +2,10 @@ const GameQueue = require('./gameQueue');
 const Bot = require('./bot');
 
 class Dumper {
+	threads;
+
 	static async init() {
-		
+		this.threads = [];
 	}
 
 	static async start() {
@@ -11,7 +13,9 @@ class Dumper {
 			let gameData = GameQueue.get();
 
 			if (gameData) {
-				await this.dumpGame(gameData).catch(console.error);
+				let promise = this.dumpGame(gameData).catch(console.error);
+
+				// TODO: Add multi threading support
 			} else {
 				await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 second before checking the queue again
 			}
