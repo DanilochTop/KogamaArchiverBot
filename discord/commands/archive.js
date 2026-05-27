@@ -63,7 +63,7 @@ class Command {
 			return await interaction.reply({ content: '❌ | The provided URL does not correspond to a valid KoGaMa game.', flags: DiscordJS.MessageFlags.Ephemeral });
 		}
 
-		await interaction.reply({ content: `✅ | Added \`${gameData.name}\` (ID: \`${gameId}\`) by \`${gameData.member_username}\` to the queue!` });
+		await interaction.reply({ content: `✅ | Added \`${gameData.name}\` (ID: \`${gameId}\`) by \`${gameData.member_username}\` to the queue!`, flags: DiscordJS.MessageFlags.Ephemeral });
 
 		GameQueue.add({
 			id: gameId,
